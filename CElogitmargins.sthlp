@@ -114,12 +114,12 @@ Michael Droste. "fastreshape". {browse "https://github.com/mdroste/stata-fastres
 {p_end}
 
 {phang}
-Urs Fischbacher and Franziska Föllmi-Heusi. "Lies in Disguise-an Experimental Study on Cheating".
+Urs Fischbacher and Franziska Föllmi-Heusi (2013). "Lies in Disguise-an Experimental Study on Cheating".
 {it:Journal of the European Economic Association, 11, 525-547.}
 {p_end}
 
 {phang}
-Tilman Fries. "Estimating lies in lying experiments".
+Tilman Fries (2022). "Estimating lies in lying experiments".
 {it:mimeo.}
 {browse "https://tilmanfries.gituhb.io":[link]}
 {p_end}
