@@ -6,7 +6,7 @@ CElogit
 | [Installation](#installation)
 | [Usage](#usage)
 | [Examples](#examples)
-| [Further reading](#more)
+| [Further reading](#further-reading)
 
 Take care of the classification error when analyzing data from your lying experiment.
 
