@@ -99,7 +99,7 @@ Email: {browse "mailto:tilman.fries@wzb.eu":tilman.fries@wzb.eu}
 {marker guide}{...}
 {title:Guide}
 
-A more detailed guide is included in the {browse "https://tilmanfries.gituhb.io":Github repository}. This includes examples and a link to the working paper.
+A more detailed guide is included in the {browse "https://https://github.com/tilmanfries/CElogit":Github repository}. This includes examples and a link to the working paper.
 
 {marker updates}{...}
 {title:Updates}
@@ -121,5 +121,5 @@ Urs Fischbacher and Franziska Föllmi-Heusi (2013). "Lies in Disguise-an Experim
 {phang}
 Tilman Fries (2022). "Estimating lies in lying experiments".
 {it:mimeo.}
-{browse "https://tilmanfries.gituhb.io":[link]}
+{browse "https://github.com/tilmanfries/CElogit":[link]}
 {p_end}

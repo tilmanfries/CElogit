@@ -38,7 +38,7 @@
 
 {phang}{opt fast:reshape} causes the command to use the {opt fastreshape} command when reshaping the data from wide to long (observationXstate level). This leads to substantial speed improvements when working with large data sets but requires that the {opt fastreshape} package is installed.
 
-{phang}{opt vce(vcetype)} may be {opt un:adjusted} (default), {opt r:obust} or {opt cl:uster}.
+{phang}{opt vce(vcetype)} may be {opt robust} or {opt cluster}. The default is the homoskedastic logit error.
 
 
 {marker postestimation}{...}
@@ -60,7 +60,8 @@ There also is the command {cmd:{help  CElogitmargins}} which calculates marginal
 
 {pstd}
 
-1. When using the {cmd: fastreshape} option, the command won't handle variable names that end with a number but are not part of a specified stub (like pdraw or stake) very well and might return an error. In these cases, either rename the variables or do not use the {cmd: fastreshape} option.
+1. When using the {cmd: fastreshape} option, the command won't handle variable names that end with a number but are not part of a specified stub (like pdraw or stake) very well and might return an error.
+In these cases, either rename the variables or do not use the {cmd: fastreshape} option.
 
 {title:Description}
 
@@ -138,7 +139,7 @@ Email: {browse "mailto:tilman.fries@wzb.eu":tilman.fries@wzb.eu}
 {marker guide}{...}
 {title:Guide}
 
-A more detailed guide is included in the {browse "https://tilmanfries.gituhb.io":Github repository}. This includes examples and a link to the working paper.
+A more detailed guide is included in the {browse "https://github.com/tilmanfries/CElogit":Github repository}. This includes examples and a link to the working paper.
 
 {marker updates}{...}
 {title:Updates}
@@ -159,5 +160,5 @@ Urs Fischbacher and Franziska Föllmi-Heusi (2013). "Lies in Disguise-an Experim
 {phang}
 Tilman Fries (2022). "Estimating lies in lying experiments".
 {it:mimeo.}
-{browse "https://tilmanfries.gituhb.io":[link]}
+{browse "https://github.com/tilmanfries/CElogit":[link]}
 {p_end}
