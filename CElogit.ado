@@ -75,15 +75,15 @@ THIS IS THE HELP FILE
 	else {
 	    qui fastreshape long "`pdraw'" "`stake'", i(`id') j(`state')
 	}
-	drop if `pdraw' == .
+	qui drop if `pdraw' == .
 
-	gen `high' = `state' >= `kstar'
-	gen `reported' = `state' == `depvar'
-	gen `high_report' = `depvar' >= `kstar'
-	gen `c' = `high' * 9999999999999999999
+	qui gen `high' = `state' >= `kstar'
+	qui gen `reported' = `state' == `depvar'
+	qui gen `high_report' = `depvar' >= `kstar'
+	qui gen `c' = `high' * 9999999999999999999
 
 	if "`interact_gamma'" != "" {
-		gen `stakeXv' = `stake' * `interact_gamma'
+		qui gen `stakeXv' = `stake' * `interact_gamma'
 	}
 
 	di "Maximizing the likelihood..."
@@ -215,10 +215,6 @@ void mywork(string scalar indepvars, ///
 			}
 		}
 	}
-
-
-
-	"Now optimizing."
 
 	S = optimize_init()
 	optimize_init_argument(S, 1, y)

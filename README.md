@@ -18,7 +18,7 @@ Overview
 
 CElogit is a Stata command that can be used to analyze data from lying experiments where participants roll dice, toss coins or draw from urns.
 
-The command estimates a discrete choice model of the lying rate for a given set of independent variables. A full description of the model and applications are in the [working paper](https://tilmanfries.github.io/PAPER).
+The command estimates a discrete choice model of the lying rate for a given set of independent variables. A full description of the model and applications are in the [working paper](https://tilmanfries.github.io/PAPER) (coming soon).
 
 I experimented in earlier stages with implementing the model in python. Contact me if you are interested in the python code.
 
@@ -72,15 +72,23 @@ CElogit report GenderF, kstar(kstar) pdraw(p_draw) stake(stake)
 
 /* The following command returns marginal effects.
 There are two ways of calculating marg. effects; either
-continuously or discretely. The command calculates continuous marg.
+continuously or discretely. The command calculates the average continuous marg.
 effects as a default. To obtain appropriate marg. effects for
-binary variables, use the binary() option. Including the stake option
+binary variables, use the binary() option. The includestake option
 will display the marginal effect of the stake variable in the output.*/
 CElogitmargins GenderF, binary(GenderF) includestake
 
 * To obtain the estimated lying rate type the previous command without any options.
 CElogitmargins
 ```
+
+The code above should return the following estimation results:
+
+![CElogit command](figures/CElogit_screen.png "CElogit command")
+
+![Marginal effects](figures/margins_screen.png "Average marginal effects")
+
+![Lying rate](figures/lying_rate_screen.png "Estimated lying rate")
 
 Here's an additional example of how to test whether models with different state partitions generate different estimates. This is equal to what Stata's suest command does to combine estimation results from different models. See Example 3 in the [suest manual](https://www.stata.com/manuals13/rsuest.pdf) for an explanation of the rationale behind the stacking approach implemented below.
 
@@ -115,6 +123,6 @@ test (_b[GenderFA] = _b[GenderFB]) (_b[Interaction] = 0) (_b[model]=0)
 Further reading
 ---------------------------------
 
-This program builds on the experimental economic literature on lying games. For an introduction, see [preferencesfortruthtelling.com](http://www.preferencesfortruthtelling.com/).
+This program builds on the experimental economic literature on lying games. For an introduction, see the homepage [preferencesfortruthtelling.com](http://www.preferencesfortruthtelling.com/) created by Johannes Abeler, Daniele Nosenzo, and Collin Raymond.
 
-For more background on the estimator and further references and acknowledgements, see the [working paper](https://tilmanfries.github.io/PAPER).
+For more background on the estimator and further references and acknowledgements, see the [working paper](https://tilmanfries.github.io/PAPER) (link coming soon).

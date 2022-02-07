@@ -45,11 +45,11 @@ program CElogitmargins, eclass
 	}
 
 	foreach var in `hold' {
-	    drop if `var' == .
+	    qui drop if `var' == .
 	}
 
-	 drop if `depvar' == .
-	 drop if `kstar' == .
+	qui drop if `depvar' == .
+	qui drop if `kstar' == .
 
 	di "Reshaping the data..."
 	qui gen `id' = _n
@@ -71,7 +71,7 @@ program CElogitmargins, eclass
 	}
 
 	qui drop if `pdraw' == .
-	gen `high' = `state' >= `kstar'
+	qui gen `high' = `state' >= `kstar'
 	qui drop if `high' == 1
     mata: mywork("`indepvars'",  ///
 	   "`id'", "`pdraw'", "`state'", ///
@@ -122,8 +122,6 @@ program CElogitmargins, eclass
 
 				foreach bin in `binary' {
 					if "`var'" == "`bin'" {
-						di "`var'"
-						di "`bin'"
 						matrix `b'[1,`k'] = `b2'[1,`j']
 						matrix `V'[`k',`k'] = `V2'[`j',`j']
 					}
@@ -137,6 +135,7 @@ program CElogitmargins, eclass
     matrix colnames `V' = `cnames'
     matrix rownames `V' = `cnames'
 
+    _estimates clear
 	_estimates hold CEestimates
 
 	ereturn post `b' `V', esample(`touse') buildfvinfo
@@ -381,11 +380,11 @@ program CElyingrate, eclass
 	}
 
 	foreach var in `hold' {
-	    drop if `var' == .
+	    qui drop if `var' == .
 	}
 
-	drop if `depvar' == .
-	drop if `kstar' == .
+	qui drop if `depvar' == .
+	qui drop if `kstar' == .
 
 	di "Reshaping the data..."
 	qui gen `id' = _n
@@ -406,9 +405,9 @@ program CElyingrate, eclass
 		}
 	}
 
-	drop if `pdraw' == .
+	qui drop if `pdraw' == .
 
-	gen `high' = `state' >= `kstar'
+	qui gen `high' = `state' >= `kstar'
 	qui drop if `high' == 1
 
     mata: mywork2("`indepvars'",  ///
@@ -423,6 +422,7 @@ program CElyingrate, eclass
     matrix colnames `V' = "Lying rate"
     matrix rownames `V' = "Lying rate"
 
+	_estimates clear
 	_estimates hold CEestimates
 
 	ereturn post `b' `V'
