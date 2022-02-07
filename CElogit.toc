@@ -1,0 +1,3 @@
+v 0.1
+d Tilman Fries, tilman.fries@wzb.eu
+p 'CElogit': Classification error model to analyze data from lying experiments

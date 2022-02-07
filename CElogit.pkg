@@ -1,0 +1,10 @@
+v 0.1
+d
+d 'CElogit': Classification error model to analyze data from lying experiments
+d
+d Distribution-Date: 20220207
+d
+f CElogit.ado
+f CElogit.sthlp
+f CElogitmargins.ado
+f CElogitmargins.sthlp
