@@ -84,11 +84,11 @@ CElogitmargins
 
 The code above should return the following estimation results:
 
-![CElogit command](figures/CElogit_screen.png "CElogit command")
+![CElogit command](figures/CElogit_screen.PNG "CElogit command")
 
-![Marginal effects](figures/margins_screen.png "Average marginal effects")
+![Marginal effects](figures/margins_screen.PNG "Average marginal effects")
 
-![Lying rate](figures/lying_rate_screen.png "Estimated lying rate")
+![Lying rate](figures/lying_rate_screen.PNG "Estimated lying rate")
 
 Here's an additional example of how to test whether models with different state partitions generate different estimates. This is equal to what Stata's suest command does to combine estimation results from different models. See Example 3 in the [suest manual](https://www.stata.com/manuals13/rsuest.pdf) for an explanation of the rationale behind the stacking approach implemented below.
 
