@@ -46,10 +46,9 @@ help CElogitmargins
 
 Examples
 ---------------------------------
-The following example uses data from Fischbacher and Föllmi-Heusi (2013). "Lies in Disguise -- A Theoretical Analysis of Cheating," *Journal of the European Economic Association*, 11, 525-547. The data can be downloaded from the [journal homepage](https://doi.org/10.1111/jeea.12014).
+The following example uses data from Fischbacher and Föllmi-Heusi (2013). "Lies in Disguise – A Theoretical Analysis of Cheating," *Journal of the European Economic Association*, 11, 525-547. The data can be downloaded from the [journal homepage](https://doi.org/10.1111/jeea.12014).
 
 ```stata
-clear
 use LiesInDisguise.dta
 
 * Keep only the data from the BASELINE treatment
@@ -123,6 +122,6 @@ test (_b[GenderFA] = _b[GenderFB]) (_b[Interaction] = 0) (_b[model]=0)
 Further reading
 ---------------------------------
 
-This program builds on the experimental economic literature on lying games. For an introduction, see the homepage [preferencesfortruthtelling.com](http://www.preferencesfortruthtelling.com/) created by Johannes Abeler, Daniele Nosenzo, and Collin Raymond.
+This program builds on the experimental economic literature on lying behavior. For an introduction, see the homepage [preferencesfortruthtelling.com](http://www.preferencesfortruthtelling.com/) created by Johannes Abeler, Daniele Nosenzo, and Collin Raymond.
 
 For more background on the estimator and further references and acknowledgements, see the [working paper](https://tilmanfries.github.io/PAPER) (link coming soon).
